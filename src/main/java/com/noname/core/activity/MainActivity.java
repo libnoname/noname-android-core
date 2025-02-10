@@ -81,7 +81,7 @@ public class MainActivity extends CordovaActivity {
 
     protected void initWebViewSettings(WebView webview, WebSettings settings) {
         settings.setTextZoom(100);
-       settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         webview.addJavascriptInterface(new NonameJavaScriptInterface(this, webview, preferences), "NonameAndroidBridge");
         WebView.setWebContentsDebuggingEnabled(true);
     }
@@ -166,7 +166,6 @@ public class MainActivity extends CordovaActivity {
                                     }
                                     else {
                                         Log.e(TAG, serviceName + "是服务未启动或不存在");
-                                        Log.e("MainActivity", serviceName + "是服务未启动或不存在");
                                         navigateToAppSettingsAndExit();
                                     }
                                 } catch (java.lang.SecurityException e) {
