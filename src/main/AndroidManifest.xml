@@ -16,7 +16,7 @@
             android:exported="true"
             android:label="@string/webview_selection_activity_name"
             android:launchMode="singleTask"
-            android:name="com.noname.core.activity.WebViewSelectionActivity"
+            android:name="com.noname.core.activities.WebViewSelectionActivity"
             android:screenOrientation="fullSensor"
             android:theme="@android:style/Theme.Light.NoTitleBar">
             <intent-filter android:label="@string/launcher_name">
