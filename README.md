@@ -14,7 +14,11 @@ noname安卓版本核心库
 
 选择项目根目录，模块名称可以自己起，但一般用:NonameCore即可
 
-然后在自己的Cordova安卓项目的MainActivity继承com.noname.core.activity.MainActivity
+如果你的是普通的Cordova安卓项目，你可以在自己的Cordova安卓项目的MainActivity继承com.noname.core.activity.MainActivity
+
+如果你的项目不是一打开就显示webview，那你可以跟据需要，来继承WebViewUpgradeActivity或者WebViewUpgradeAppCompatActivity
+
+目前NonameCoreApplication没有作用，但以后或许会加一些功能
 
 # Api说明
 1. 显示一个持续几秒的文字提示
