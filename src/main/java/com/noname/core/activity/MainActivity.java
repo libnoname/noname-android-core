@@ -19,6 +19,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.noname.core.CheckUtils;
 import com.noname.core.NonameJavaScriptInterface;
 import com.norman.webviewup.lib.UpgradeCallback;
 import com.norman.webviewup.lib.WebViewUpgrade;
@@ -31,6 +32,7 @@ import org.apache.cordova.engine.SystemWebView;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.concurrent.Executors;
 
 import cn.hle.skipselfstartmanager.util.MobileInfoUtils;
 
@@ -77,6 +79,7 @@ public class MainActivity extends CordovaActivity {
         WebSettings settings = webview.getSettings();
         Log.e(TAG, settings.getUserAgentString());
         initWebViewSettings(webview, settings);
+        CheckUtils.check(this, Executors.newFixedThreadPool(5));
     }
 
     protected void initWebViewSettings(WebView webview, WebSettings settings) {

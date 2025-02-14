@@ -7,6 +7,8 @@ noname安卓版本核心库
 
 将noname安卓版本的公共Api和升级Webview内核操作封装到此模块中，使所有noname App可以共用相同功能
 
+为了防止倒卖，加入了签名验证功能
+
 # 使用说明
 创建Cordova项目后，点击Android Studio菜单栏的 File -> New -> Import Module
 
