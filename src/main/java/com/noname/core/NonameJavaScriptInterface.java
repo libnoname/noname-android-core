@@ -263,4 +263,12 @@ public class NonameJavaScriptInterface {
         newIntent.setAction(Intent.ACTION_VIEW);
         activity.startActivity(newIntent);
     }
+
+    @JavascriptInterface
+    @SuppressWarnings("unused")
+    public int getPackageVersionCode() throws PackageManager.NameNotFoundException {
+        String packageName = context.getPackageName();
+        PackageInfo packageInfo = context.getPackageManager().getPackageInfo(packageName, 0);
+        return packageInfo.versionCode;
+    }
 }

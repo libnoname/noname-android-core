@@ -64,3 +64,8 @@ var bool: boolean = window.NonameAndroidBridge.captureScreen(fileName: string)
 ```ts
 window.NonameAndroidBridge.changeWebviewProvider()
 ```
+
+9.获取当前App的版本号
+```ts
+var version: number = window.NonameAndroidBridge.getPackageVersionCode()
+```
