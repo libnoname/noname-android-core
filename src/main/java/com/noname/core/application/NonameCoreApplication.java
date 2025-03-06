@@ -6,7 +6,7 @@ public class NonameCoreApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        if (getClass().getSuperclass() != Application.class) {
+        if (NonameCoreApplication.class.getSuperclass() != Application.class) {
             throw new RuntimeException("this class is not my NonameCoreApplication");
         }
     }
